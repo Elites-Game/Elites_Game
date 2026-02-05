@@ -1,8 +1,9 @@
+/* تنظیمات پایه */
 body {
   margin: 0;
   font-family: sans-serif;
   direction: rtl;
-  background: #000;
+  background: #050608;
   color: #fff;
 }
 
@@ -12,8 +13,8 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(14px);
   padding: 12px 40px;
 }
 
@@ -32,7 +33,7 @@ header {
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 35px;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
@@ -40,7 +41,7 @@ header {
 .nav-menu a {
   color: #d0d0d0;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   transition: 0.3s;
 }
 
@@ -48,15 +49,17 @@ header {
   color: #ffffff;
 }
 
+/* دکمه عضویت */
 .join-btn {
   background: #00ff55;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border-radius: 8px;
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14px;
   transition: 0.3s;
+  margin-left: 65px;
 }
 
 .join-btn:hover {
@@ -71,30 +74,47 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(#000000aa, #000000aa),
-              url('https://picsum.photos/1200/800');
-  background-size: cover;
+
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)),
+    url("bg-elits.png") center/cover no-repeat;
+
+  padding-top: 60px;
+}
+
+/* لوگوی وسط صفحه */
+.logo-box {
+  width: 120px;
+  height: 120px;
+  background: #0a0d12;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+
+  box-shadow:
+    0 0 12px rgba(0, 255, 102, 0.4),
+    0 0 25px rgba(0, 255, 102, 0.25),
+    0 0 45px rgba(0, 255, 102, 0.15);
+}
+
+.logo-e {
+  font-size: 64px;
+  font-weight: bold;
+  color: #00ff66;
+  text-shadow:
+    0 0 8px rgba(0, 255, 102, 0.8),
+    0 0 16px rgba(0, 255, 102, 0.6);
 }
 
 .title {
-  font-size: 60px;
-  font-weight: bold;
+  font-size: 56px;
+  font-weight: 800;
 }
 
 .subtitle {
-  font-size: 22px;
+  font-size: 20px;
   margin-top: 10px;
   color: #00ff66;
-}
-
-/* بخش‌ها */
-.section {
-  padding: 80px 40px;
-  text-align: center;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
 }

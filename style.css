@@ -15,7 +15,7 @@ header {
   z-index: 1000;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(14px);
-  padding: 10px 32px;
+  padding: 12px 40px;
 }
 
 .top-nav {
@@ -25,7 +25,7 @@ header {
 }
 
 .nav-logo {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   color: #00ff66;
 }
@@ -33,7 +33,7 @@ header {
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
@@ -41,7 +41,7 @@ header {
 .nav-menu a {
   color: #d0d0d0;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   transition: 0.3s;
 }
 
@@ -49,23 +49,24 @@ header {
   color: #ffffff;
 }
 
+/* دکمه عضویت */
 .join-btn {
   background: #00ff55;
-  padding: 6px 14px;
+  padding: 9px 20px;
   border-radius: 8px;
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  font-size: 12.5px;
+  font-size: 14px;
   transition: 0.3s;
-  margin-left: 10px;
+  margin-left: 35px;
 }
 
 .join-btn:hover {
   background: #00cc44;
 }
 
-/* صفحه اصلی */
+/* صفحه اصلی با بک‌گراند سایبری سبز */
 .hero {
   height: 100vh;
   display: flex;
@@ -76,21 +77,42 @@ header {
 
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)),
-    url("https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1920&auto=format&fit=crop") center/cover no-repeat;
+    url("https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1920&auto=format&fit=crop") center/cover no-repeat,
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 255, 102, 0.08) 0px,
+      rgba(0, 255, 102, 0.08) 1px,
+      transparent 1px,
+      transparent 40px
+    );
 
   padding-top: 60px;
 }
 
-/* لوگوی جدید */
-.logo-image {
-  width: 150px;
-  height: 150px;
-  background: url("logo.jpg") center/contain no-repeat;
+/* لوگوی وسط صفحه */
+.logo-box {
+  width: 120px;
+  height: 120px;
+  background: #0a0d12;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 25px;
 
-  filter: drop-shadow(0 0 12px rgba(0, 255, 102, 0.6))
-          drop-shadow(0 0 25px rgba(0, 255, 102, 0.4))
-          drop-shadow(0 0 45px rgba(0, 255, 102, 0.2));
+  box-shadow:
+    0 0 12px rgba(0, 255, 102, 0.4),
+    0 0 25px rgba(0, 255, 102, 0.25),
+    0 0 45px rgba(0, 255, 102, 0.15);
+}
+
+.logo-e {
+  font-size: 64px;
+  font-weight: bold;
+  color: #00ff66;
+  text-shadow:
+    0 0 8px rgba(0, 255, 102, 0.8),
+    0 0 16px rgba(0, 255, 102, 0.6);
 }
 
 .title {
@@ -267,7 +289,7 @@ header {
   border-radius: 999px;
 }
 
-/* فوتر */
+/* فوتر بالا */
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -315,6 +337,7 @@ header {
   color: #00ff66;
 }
 
+/* فوتر پایین */
 .bottom-footer {
   text-align: center;
   padding: 16px;

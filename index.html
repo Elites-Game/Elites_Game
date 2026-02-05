@@ -1,95 +1,83 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  direction: rtl;
-  background: #0d0d0d;
-  color: #fff;
-}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>Elits_Game | تیم برنامه‌نویسی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* منو */
-header {
-  width: 100%;
-  padding: 15px 40px;
-  position: fixed;
-  top: 0;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  z-index: 100;
-}
+<header>
+  <nav class="nav">
+    <ul>
+      <li><a href="#home">خانه</a></li>
+      <li><a href="#about">درباره ما</a></li>
+      <li><a href="#projects">پروژه‌ها</a></li>
+      <li><a href="#team">تیم</a></li>
+      <li><a href="#contact">تماس با ما</a></li>
+    </ul>
+    <a class="join-btn" href="#">عضویت در تیم</a>
+  </nav>
+</header>
 
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
+<section id="home" class="hero">
+  <h1 class="title">Elits_Game</h1>
+  <p class="subtitle">تیم برنامه‌نویسی و توسعه بازی</p>
+</section>
 
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-}
+<section id="about" class="section">
+  <h2>درباره ما</h2>
+  <p>
+    تیم Elits_Game در زمینه‌ی برنامه‌نویسی، طراحی بازی و توسعه‌ی پروژه‌های دیجیتال فعالیت می‌کند.
+    هدف ما ساخت پروژه‌های خلاقانه و حرفه‌ای است.
+  </p>
+</section>
 
-.join-btn {
-  background: #00ff66;
-  padding: 10px 18px;
-  border-radius: 8px;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-}
+<section id="projects" class="section">
+  <h2>پروژه‌ها</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>پروژه ۱</h3>
+      <p>توضیح کوتاه درباره پروژه.</p>
+    </div>
+    <div class="card">
+      <h3>پروژه ۲</h3>
+      <p>توضیح کوتاه درباره پروژه.</p>
+    </div>
+    <div class="card">
+      <h3>پروژه ۳</h3>
+      <p>توضیح کوتاه درباره پروژه.</p>
+    </div>
+  </div>
+</section>
 
-/* هدر اصلی */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(#000000aa, #000000aa), url('https://picsum.photos/1200/800');
-  background-size: cover;
-}
+<section id="team" class="section">
+  <h2>تیم ما</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>مرتضی</h3>
+      <p>مدیر تیم و برنامه‌نویس اصلی</p>
+    </div>
+    <div class="card">
+      <h3>عضو ۲</h3>
+      <p>نقش تیمی</p>
+    </div>
+    <div class="card">
+      <h3>عضو ۳</h3>
+      <p>نقش تیمی</p>
+    </div>
+  </div>
+</section>
 
-.title {
-  font-size: 60px;
-  font-weight: bold;
-}
+<section id="contact" class="section">
+  <h2>تماس با ما</h2>
+  <p>برای همکاری یا سوالات با ما در ارتباط باشید.</p>
+  <p>Email: example@gmail.com</p>
+</section>
 
-.subtitle {
-  font-size: 22px;
-  margin-top: 10px;
-  color: #00ff66;
-}
+<footer>
+  <p>© 2025 Elits_Game</p>
+</footer>
 
-/* بخش‌ها */
-.section {
-  padding: 80px 40px;
-  text-align: center;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #1a1a1a;
-  padding: 20px;
-  width: 250px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  background: #333;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
-}
+</body>
+</html>

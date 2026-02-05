@@ -1,38 +1,91 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <title>Elits_Game | تیم برنامه‌نویسی و توسعه بازی</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  direction: rtl;
+  background: #000;
+  color: #fff;
+}
 
-<header>
-  <nav class="top-nav">
+/* هدر */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  padding: 12px 40px;
+}
 
-    <!-- لوگو سمت راست -->
-    <div class="nav-logo">Elits_Game</div>
+/* ساختار کلی هدر */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    <!-- منو وسط -->
-    <ul class="nav-menu">
-      <li><a href="#home">خانه</a></li>
-      <li><a href="#about">درباره ما</a></li>
-      <li><a href="#projects">پروژه‌ها</a></li>
-      <li><a href="#team">تیم</a></li>
-      <li><a href="#contact">تماس با ما</a></li>
-    </ul>
+/* لوگو سمت راست */
+.nav-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #00ff66;
+}
 
-    <!-- دکمه عضویت سمت چپ -->
-    <a class="join-btn" href="#">عضویت در تیم</a>
+/* منو وسط */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
 
-  </nav>
-</header>
+.nav-menu a {
+  color: #d0d0d0;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
 
-<!-- صفحه اصلی -->
-<section id="home" class="hero">
-  <h1 class="title">Elits_Game</h1>
-  <p class="subtitle">تیم برنامه‌نویسی و توسعه بازی</p>
-</section>
+.nav-menu a:hover {
+  color: #ffffff;
+}
 
-</body>
-</html>
+/* دکمه عضویت سمت چپ */
+.join-btn {
+  background: #00ff55;
+  padding: 10px 22px;
+  border-radius: 8px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.join-btn:hover {
+  background: #00cc44;
+}
+
+/* صفحه اصلی */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(#000000aa, #000000aa), url('https://picsum.photos/1200/800');
+  background-size: cover;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 22px;
+  margin-top: 10px;
+  color: #00ff66;
+}

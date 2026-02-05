@@ -6,41 +6,68 @@ body {
   color: #fff;
 }
 
-/* منو */
+/* هدر */
 header {
   width: 100%;
-  padding: 15px 40px;
   position: fixed;
   top: 0;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(10px);
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(12px);
+  padding: 12px 40px;
+}
+
+/* ساختار کلی هدر */
+.top-nav {
   display: flex;
   justify-content: space-between;
-  z-index: 100;
+  align-items: center;
 }
 
-.nav ul {
+/* لوگو سمت راست */
+.nav-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #00ff66;
+}
+
+/* منو وسط */
+.nav-menu {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav a {
-  color: #fff;
+.nav-menu a {
+  color: #d0d0d0;
   text-decoration: none;
   font-size: 16px;
+  transition: 0.3s;
 }
 
+.nav-menu a:hover {
+  color: #ffffff;
+}
+
+/* دکمه عضویت سمت چپ */
 .join-btn {
-  background: #00ff66;
-  padding: 10px 18px;
+  background: #00ff55;
+  padding: 10px 22px;
   border-radius: 8px;
   color: #000;
   text-decoration: none;
   font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
-/* هدر اصلی */
+.join-btn:hover {
+  background: #00cc44;
+}
+
+/* صفحه اصلی */
 .hero {
   height: 100vh;
   display: flex;

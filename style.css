@@ -66,7 +66,7 @@ header {
   background: #00cc44;
 }
 
-/* صفحه اصلی با تم گرید سبز */
+/* صفحه اصلی با بک‌گراند سایبری سبز */
 .hero {
   height: 100vh;
   display: flex;
@@ -76,17 +76,16 @@ header {
   text-align: center;
 
   background:
-    linear-gradient(180deg, rgba(0, 255, 102, 0.05) 0%, rgba(0, 0, 0, 0.9) 70%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)),
+    url("https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1920&auto=format&fit=crop") center/cover no-repeat,
     repeating-linear-gradient(
       0deg,
       rgba(0, 255, 102, 0.08) 0px,
       rgba(0, 255, 102, 0.08) 1px,
       transparent 1px,
       transparent 40px
-    ),
-    #050608;
+    );
 
-  background-size: cover;
   padding-top: 60px;
 }
 

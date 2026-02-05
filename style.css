@@ -1,122 +1,38 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  direction: rtl;
-  background: #0d0d0d;
-  color: #fff;
-}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>Elits_Game | تیم برنامه‌نویسی و توسعه بازی</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* هدر */
-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(12px);
-  padding: 12px 40px;
-}
+<header>
+  <nav class="top-nav">
 
-/* ساختار کلی هدر */
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    <!-- لوگو سمت راست -->
+    <div class="nav-logo">Elits_Game</div>
 
-/* لوگو سمت راست */
-.nav-logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #00ff66;
-}
+    <!-- منو وسط -->
+    <ul class="nav-menu">
+      <li><a href="#home">خانه</a></li>
+      <li><a href="#about">درباره ما</a></li>
+      <li><a href="#projects">پروژه‌ها</a></li>
+      <li><a href="#team">تیم</a></li>
+      <li><a href="#contact">تماس با ما</a></li>
+    </ul>
 
-/* منو وسط */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 35px;
-  margin: 0;
-  padding: 0;
-}
+    <!-- دکمه عضویت سمت چپ -->
+    <a class="join-btn" href="#">عضویت در تیم</a>
 
-.nav-menu a {
-  color: #d0d0d0;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.3s;
-}
+  </nav>
+</header>
 
-.nav-menu a:hover {
-  color: #ffffff;
-}
+<!-- صفحه اصلی -->
+<section id="home" class="hero">
+  <h1 class="title">Elits_Game</h1>
+  <p class="subtitle">تیم برنامه‌نویسی و توسعه بازی</p>
+</section>
 
-/* دکمه عضویت سمت چپ */
-.join-btn {
-  background: #00ff55;
-  padding: 10px 22px;
-  border-radius: 8px;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 15px;
-  transition: 0.3s;
-}
-
-.join-btn:hover {
-  background: #00cc44;
-}
-
-/* صفحه اصلی */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(#000000aa, #000000aa), url('https://picsum.photos/1200/800');
-  background-size: cover;
-}
-
-.title {
-  font-size: 60px;
-  font-weight: bold;
-}
-
-.subtitle {
-  font-size: 22px;
-  margin-top: 10px;
-  color: #00ff66;
-}
-
-/* بخش‌ها */
-.section {
-  padding: 80px 40px;
-  text-align: center;
-}
-
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #1a1a1a;
-  padding: 20px;
-  width: 250px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  background: #333;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
-}
+</body>
+</html>

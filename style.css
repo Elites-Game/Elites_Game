@@ -408,7 +408,7 @@ header {
   }
 
   .nav-logo {
-    margin-right: 30px !important; /* فاصله کم بین لوگو و دکمه */
+    margin-right: 30px !important;
     padding: 0 !important;
   }
 
@@ -452,56 +452,18 @@ header {
 .menu-overlay.show {
   display: block;
 }
-/* سبز کردن فقط کلمه "ما" در عنوان پروژه‌ها */
-.section-title span {
-  color: #00ff66 !important;
-}
 
-/* وسط‌چین کردن عنوان پروژه‌ها */
+/* فیکس نهایی بخش پروژه‌ها */
 #projects .section-title {
   text-align: center !important;
 }
-/* وسط‌چین کردن کل بخش پروژه‌ها */
-#projects {
-  text-align: center;
-}
 
-/* فقط کلمه "ما" سبز شود */
 #projects .section-title span {
   color: #00ff66 !important;
 }
 
-/* وسط‌چین کردن متن توضیح */
 #projects .section-text {
-  text-align: center;
+  text-align: center !important;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* وسط‌چین کردن گرید پروژه‌ها */
-.projects-grid {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-/* وسط‌چین کردن متن داخل کارت‌های پروژه */
-.project-card {
-  text-align: center;
-}
-
-/* وسط‌چین کردن عنوان پروژه */
-.project-card h3 {
-  text-align: center;
-}
-
-/* وسط‌چین کردن توضیحات */
-.project-card p {
-  text-align: center;
-}
-
-/* وسط‌چین کردن تکنولوژی‌ها و وضعیت */
-.project-tech,
-.project-status {
-  text-align: center;
 }

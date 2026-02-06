@@ -485,3 +485,23 @@ header {
   flex-wrap: wrap;
   gap: 20px;
 }
+/* وسط‌چین کردن متن داخل کارت‌های پروژه */
+.project-card {
+  text-align: center;
+}
+
+/* وسط‌چین کردن عنوان پروژه */
+.project-card h3 {
+  text-align: center;
+}
+
+/* وسط‌چین کردن توضیحات */
+.project-card p {
+  text-align: center;
+}
+
+/* وسط‌چین کردن تکنولوژی‌ها و وضعیت */
+.project-tech,
+.project-status {
+  text-align: center;
+}

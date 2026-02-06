@@ -8,6 +8,9 @@
 </head>
 <body>
 
+<!-- پس‌زمینه تاریک منو -->
+<div class="menu-overlay"></div>
+
 <header>
   <nav class="top-nav">
 
@@ -205,13 +208,8 @@
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.nav-menu');
+  const overlay = document.querySelector('.menu-overlay');
 
-  // ایجاد پس‌زمینه تاریک
-  const overlay = document.createElement('div');
-  overlay.classList.add('menu-overlay');
-  document.body.appendChild(overlay);
-
-  // باز و بسته کردن منو
   function toggleMenu() {
     menu.classList.toggle('open');
     overlay.classList.toggle('show');
@@ -220,7 +218,6 @@
   toggle.addEventListener('click', toggleMenu);
   overlay.addEventListener('click', toggleMenu);
 
-  // بستن منو هنگام کلیک روی لینک‌ها
   document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.remove('open');

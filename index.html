@@ -2,6 +2,7 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elits_Game | تیم برنامه‌نویسی و توسعه بازی</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -9,6 +10,10 @@
 
 <header>
   <nav class="top-nav">
+
+    <!-- دکمه سه‌خطی موبایل -->
+    <div class="menu-toggle">&#9776;</div>
+
     <div class="nav-logo">Elits_Game</div>
 
     <ul class="nav-menu">
@@ -157,7 +162,7 @@
   </div>
 </section>
 
-<!-- تماس با ما / فوتر -->
+<!-- تماس با ما -->
 <section id="contact" class="section">
   <h2 class="section-title">ارتباط با ما</h2>
   <p class="section-text">
@@ -196,11 +201,15 @@
   <p>تمامی حقوق محفوظ است - Elits_Game ۱۴۰۴ ©</p>
 </footer>
 
+<!-- اسکریپت باز و بسته شدن منوی موبایل -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.nav-menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+</script>
+
 </body>
 </html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elits_Game</title>
-  <link rel="stylesheet" href="style.css">
-</head>

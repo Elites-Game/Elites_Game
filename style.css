@@ -38,6 +38,7 @@ header {
   color: #00ff66;
   cursor: pointer;
   user-select: none;
+  z-index: 4000;
 }
 
 /* لوگو */
@@ -382,27 +383,50 @@ header {
   margin-top: 20px;
 }
 
-/* نسخه موبایل — حذف کامل منو */
+/* نسخه موبایل — فعال بودن منو */
 @media (max-width: 768px) {
 
-  .nav-menu {
-    display: none !important;
+  .menu-toggle {
+    display: block;
   }
 
-  .menu-toggle {
-    display: none !important;
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 240px;
+    height: 100%;
+    background: #0a0d12;
+    flex-direction: column;
+    padding-top: 90px;
+    padding-right: 25px;
+    gap: 25px;
+    transition: 0.35s ease;
+    border-left: 1px solid rgba(0, 255, 102, 0.25);
+    z-index: 2500;
+  }
+
+  .nav-menu.open {
+    right: 0;
   }
 
   .join-btn {
-    display: none !important;
+    display: none;
   }
+}
 
-  header {
-    padding: 18px 25px;
-  }
+/* پس‌زمینه تاریک */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  z-index: 2000;
+}
 
-  .nav-logo {
-    margin: 0 auto;
-    font-size: 26px;
-  }
+.menu-overlay.show {
+  display: block;
 }

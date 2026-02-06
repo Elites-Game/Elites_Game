@@ -211,7 +211,7 @@ header {
   color: #c0c0c0;
 }
 
-/* پروژه‌ها – نسخه جدید */
+/* پروژه‌ها */
 #projects .section-title {
   font-size: 32px;
   font-weight: 800;
@@ -463,6 +463,8 @@ header {
 .menu-overlay.show {
   display: block;
 }
+
+/* استایل نهایی بخش تیم */
 #team .section-title {
   font-size: 32px;
   font-weight: 800;

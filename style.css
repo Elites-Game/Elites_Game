@@ -382,7 +382,6 @@ header {
   border-top: 1px solid #1f2430;
   margin-top: 20px;
 }
-
 /* نسخه موبایل */
 @media (max-width: 768px) {
 
@@ -450,22 +449,34 @@ header {
   display: block;
 }
 
-/* فیکس نهایی بخش پروژه‌ها */
+/* ============================
+   استایل کامل بخش پروژه‌ها (نسخه شبیه عکس)
+   ============================ */
+
+/* عنوان پروژه‌ها */
 #projects .section-title {
-  text-align: center !important;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
+/* فقط کلمه "ما" سبز */
 #projects .section-title span {
-  color: #00ff66 !important;
+  color: #00ff66;
 }
 
+/* متن توضیح زیر عنوان */
 #projects .section-text {
-  text-align: center !important;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  font-size: 17px;
+  color: #cfcfcf;
   max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.9;
 }
 
+/* گرید پروژه‌ها */
 .projects-grid {
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
@@ -473,13 +484,77 @@ header {
   margin-top: 20px !important;
 }
 
+/* کارت پروژه */
 .project-card {
-  text-align: right !important;
+  background: #10131b;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid #1f2430;
+  position: relative;
+  text-align: right;
 }
 
-.project-card h3,
-.project-card p,
-.project-tech,
+/* شماره پروژه */
+.project-number {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-size: 18px;
+  color: #00ff66;
+  opacity: 0.8;
+}
+
+/* عنوان پروژه */
+.project-card h3 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* توضیحات پروژه */
+.project-card p {
+  margin: 4px 0;
+  color: #c0c0c0;
+  line-height: 1.7;
+}
+
+/* تکنولوژی‌ها */
+.project-tech {
+  font-size: 13px;
+  color: #9adfb5;
+  margin-top: 6px;
+}
+
+/* وضعیت پروژه */
 .project-status {
-  text-align: right !important;
+  font-size: 13px;
+  margin-top: 4px;
+  color: #ffd966;
+}
+
+.project-status.done {
+  color: #7dff7d;
+}
+
+/* دکمه‌ها */
+.project-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-outline {
+  border: 1px solid #00ff66;
+  color: #00ff66;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #00ff66;
+  color: #000;
 }

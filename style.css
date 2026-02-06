@@ -7,7 +7,7 @@ body {
   color: #fff;
 }
 
-/* رنگ سبز تیمی برای Elits_Game */
+/* رنگ سبز تیمی */
 .green-title {
   color: #00ff66;
   font-weight: 800;
@@ -34,7 +34,7 @@ header {
 /* دکمه سه‌خطی موبایل */
 .menu-toggle {
   display: none;
-  font-size: 30px;
+  font-size: 32px;
   color: #00ff66;
   cursor: pointer;
   user-select: none;

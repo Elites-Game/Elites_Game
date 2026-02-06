@@ -22,25 +22,6 @@ header {
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(18px);
   padding: 18px 55px;
-
-  /* چسباندن لوگو به دکمه منو در موبایل */
-@media (max-width: 768px) {
-
-  .top-nav {
-    justify-content: flex-start;
-    gap: 12px; /* فاصله کوچک بین دکمه و لوگو */
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-logo {
-    margin: 0;
-    font-size: 24px;
-  }
-}
-
   border-bottom: 1px solid rgba(0, 255, 102, 0.15);
 }
 
@@ -402,11 +383,23 @@ header {
   margin-top: 20px;
 }
 
-/* نسخه موبایل — فعال بودن منو */
+/* نسخه موبایل — فعال بودن منو + چسباندن لوگو */
 @media (max-width: 768px) {
 
+  .top-nav {
+    justify-content: flex-start !important;
+    align-items: center;
+    gap: 10px;
+  }
+
   .menu-toggle {
-    display: block;
+    display: block !important;
+  }
+
+  .nav-logo {
+    margin: 0 !important;
+    padding: 0;
+    font-size: 24px;
   }
 
   .nav-menu {

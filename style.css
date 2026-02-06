@@ -387,29 +387,29 @@ header {
 @media (max-width: 768px) {
 
   header {
-    padding: 18px 10px !important;
+    padding: 0 !important;
   }
 
   .top-nav {
     position: relative;
     justify-content: flex-start !important;
     align-items: center !important;
-    gap: 35px !important;
+    padding: 18px 0 !important;
   }
 
   .menu-toggle {
     display: block !important;
     position: absolute;
     right: 0;
-    top: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     margin: 0 !important;
     padding: 0 !important;
   }
 
   .nav-logo {
-    margin: 0 !important;
+    margin-right: 45px !important; /* فاصله بین لوگو و دکمه */
     padding: 0 !important;
-    font-size: 24px !important;
   }
 
   .nav-menu {
@@ -433,9 +433,10 @@ header {
   }
 
   .join-btn {
-    display: none;
+    display: none !important;
   }
 }
+
 
 /* پس‌زمینه تاریک */
 .menu-overlay {

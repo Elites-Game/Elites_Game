@@ -452,3 +452,31 @@ header {
 .menu-overlay.show {
   display: block;
 }
+@media (max-width: 768px) {
+
+  header {
+    padding: 0 !important; /* حذف فاصله اضافی */
+  }
+
+  .top-nav {
+    position: relative;
+    padding: 18px 0 !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .nav-logo {
+    margin-right: 45px !important; /* فاصله دقیق بین لوگو و دکمه */
+    padding: 0 !important;
+  }
+}

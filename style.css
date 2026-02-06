@@ -6,7 +6,8 @@ body {
   background: #050608;
   color: #fff;
 }
-/* رنگ سبز تیمی برای Elits_Game در عنوان درباره ما */
+
+/* رنگ سبز تیمی برای Elits_Game */
 .green-title {
   color: #00ff66;
   font-weight: 800;
@@ -18,10 +19,10 @@ header {
   position: fixed;
   top: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.35); /* شفاف‌تر مثل نمونه */
-  backdrop-filter: blur(18px); /* بلور بیشتر */
-  padding: 18px 55px; /* فاصله دقیق مثل نمونه */
-  border-bottom: 1px solid rgba(0, 255, 102, 0.15); /* خط نازک سبز */
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(18px);
+  padding: 18px 55px;
+  border-bottom: 1px solid rgba(0, 255, 102, 0.15);
 }
 
 .top-nav {
@@ -30,7 +31,16 @@ header {
   align-items: center;
 }
 
-/* لوگوی سمت راست */
+/* دکمه سه‌خطی موبایل */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: #00ff66;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* لوگو */
 .nav-logo {
   font-size: 24px;
   font-weight: bold;
@@ -42,7 +52,7 @@ header {
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 38px; /* فاصله دقیق مثل نمونه */
+  gap: 38px;
   margin: 0;
   padding: 0;
 }
@@ -57,7 +67,7 @@ header {
 
 .nav-menu a:hover {
   color: #00ff66;
-  border-bottom: 1px solid #00ff66; /* خط زیر لینک مثل نمونه */
+  border-bottom: 1px solid #00ff66;
 }
 
 /* دکمه عضویت */
@@ -79,8 +89,7 @@ header {
   box-shadow: 0 0 18px rgba(0, 255, 102, 0.55);
 }
 
-
-/* صفحه اصلی (Hero) */
+/* صفحه اصلی */
 .hero {
   height: 100vh;
   display: flex;
@@ -96,8 +105,7 @@ header {
   padding-top: 60px;
 }
 
-
-/* لوگوی وسط صفحه */
+/* لوگوی وسط */
 .logo-box {
   width: 120px;
   height: 120px;
@@ -108,7 +116,6 @@ header {
   align-items: center;
   margin-bottom: 25px;
   border: 1px solid rgba(0, 255, 102, 0.35);
-
   box-shadow:
     0 0 12px rgba(0, 255, 102, 0.4),
     0 0 25px rgba(0, 255, 102, 0.25),
@@ -148,27 +155,23 @@ header {
   margin-top: 40px;
 }
 
-/* عنوان بخش‌ها */
 .section-title {
   font-size: 26px;
   margin-bottom: 10px;
 }
 
-/* ⭐ نسخه اصلاح‌شده درباره ما — دقیقاً مثل سایت نمونه */
+/* درباره ما */
 #about {
   text-align: center;
   padding-top: 120px;
 }
 
 #about .section-title {
-  text-align: center;
-  width: 100%;
   font-size: 32px;
   margin-bottom: 20px;
 }
 
 #about .section-text {
-  text-align: center;
   max-width: 750px;
   margin: 0 auto 40px auto;
   line-height: 2;
@@ -322,7 +325,7 @@ header {
   border-radius: 999px;
 }
 
-/* فوتر بالا */
+/* فوتر */
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -370,7 +373,6 @@ header {
   color: #00ff66;
 }
 
-/* فوتر پایین */
 .bottom-footer {
   text-align: center;
   padding: 16px;
@@ -379,26 +381,17 @@ header {
   border-top: 1px solid #1f2430;
   margin-top: 20px;
 }
-/* نسخه موبایل */
+
+/* نسخه موبایل عمومی */
 @media (max-width: 768px) {
 
   header {
     padding: 12px 20px;
   }
 
-  .nav-menu {
-    gap: 18px;
-  }
-
-  .join-btn {
-    margin-left: 20px;
-    padding: 8px 16px;
-  }
-
   .hero {
     padding-top: 120px;
     background-size: cover;
-    background-position: center;
   }
 
   .title {
@@ -413,60 +406,46 @@ header {
     padding: 50px 20px;
   }
 
-  #about .section-title {
-    font-size: 26px;
-  }
-
-  #about .section-text {
-    font-size: 15px;
-    max-width: 90%;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .features-grid,
+  .projects-grid,
+  .team-grid,
   .footer-grid {
     grid-template-columns: 1fr;
-    text-align: center;
   }
 }
-/* نسخه موبایل فقط برای منو */
+
+/* نسخه موبایل — منوی سه‌خطی */
 @media (max-width: 768px) {
 
-  header {
-    padding: 12px 18px;
-  }
-
-  .top-nav {
-    flex-wrap: wrap;
-    gap: 12px;
+  .menu-toggle {
+    display: block;
   }
 
   .nav-menu {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 18px;
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 240px;
+    height: 100%;
+    background: #0a0d12;
+    flex-direction: column;
+    padding-top: 90px;
+    padding-right: 25px;
+    gap: 25px;
+    transition: 0.35s ease;
+    border-left: 1px solid rgba(0, 255, 102, 0.25);
+    z-index: 2000;
   }
 
-  .nav-menu a {
-    font-size: 14px;
-    padding-bottom: 2px;
+  .nav-menu.open {
+    right: 0;
   }
 
   .join-btn {
-    padding: 8px 16px;
-    font-size: 13px;
-    margin-left: 0;
-    margin-right: auto;
+    display: none;
+  }
+
+  .top-nav {
+    justify-content: space-between;
   }
 }

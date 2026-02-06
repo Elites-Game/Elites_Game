@@ -43,7 +43,7 @@
   <h2 class="section-title">درباره <span class="green-title">Elits_Game</span></h2>
   <p class="section-text">
     ما یک تیم برنامه‌نویسی خلاق و پرانرژی هستیم که با عشق و علاقه به کدنویسی و توسعه بازی و اپلیکیشن و
-    پروژه‌های نوآورانه هستیم و به ان میپردازیم.
+    پروژه‌های نوآورانه هستیم و به آن می‌پردازیم.
   </p>
 
   <div class="features-grid">
@@ -201,13 +201,31 @@
   <p>تمامی حقوق محفوظ است - Elits_Game ۱۴۰۴ ©</p>
 </footer>
 
-<!-- اسکریپت باز و بسته شدن منوی موبایل -->
+<!-- اسکریپت کامل منوی موبایل -->
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.nav-menu');
 
-  toggle.addEventListener('click', () => {
+  // ایجاد پس‌زمینه تاریک
+  const overlay = document.createElement('div');
+  overlay.classList.add('menu-overlay');
+  document.body.appendChild(overlay);
+
+  // باز و بسته کردن منو
+  function toggleMenu() {
     menu.classList.toggle('open');
+    overlay.classList.toggle('show');
+  }
+
+  toggle.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+
+  // بستن منو هنگام کلیک روی لینک‌ها
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      overlay.classList.remove('show');
+    });
   });
 </script>
 

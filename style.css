@@ -461,3 +461,27 @@ header {
 #projects .section-title {
   text-align: center !important;
 }
+/* وسط‌چین کردن کل بخش پروژه‌ها */
+#projects {
+  text-align: center;
+}
+
+/* فقط کلمه "ما" سبز شود */
+#projects .section-title span {
+  color: #00ff66 !important;
+}
+
+/* وسط‌چین کردن متن توضیح */
+#projects .section-text {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* وسط‌چین کردن گرید پروژه‌ها */
+.projects-grid {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

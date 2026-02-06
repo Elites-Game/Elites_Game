@@ -463,3 +463,17 @@ header {
 .menu-overlay.show {
   display: block;
 }
+#team .section-title {
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#team .section-title span {
+  color: #00ff66;
+}
+
+#team .section-text {
+  text-align: center;
+}

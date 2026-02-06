@@ -452,3 +452,12 @@ header {
 .menu-overlay.show {
   display: block;
 }
+/* سبز کردن فقط کلمه "ما" در عنوان پروژه‌ها */
+.section-title span {
+  color: #00ff66 !important;
+}
+
+/* وسط‌چین کردن عنوان پروژه‌ها */
+#projects .section-title {
+  text-align: center !important;
+}

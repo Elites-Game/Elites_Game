@@ -430,3 +430,18 @@ header {
 .menu-overlay.show {
   display: block;
 }
+/* حذف کامل منو و دکمه سه‌خطی در موبایل */
+@media (max-width: 768px) {
+
+  .nav-menu {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .join-btn {
+    display: none !important;
+  }
+}

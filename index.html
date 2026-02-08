@@ -1,240 +1,153 @@
-/* تنظیمات پایه */
-body {
-  margin: 0;
-  font-family: sans-serif;
-  direction: rtl;
-  background: #050608;
-  color: #fff;
-}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elites_Game | تیم برنامه‌نویسی و توسعه بازی</title>
 
-/* رنگ سبز تیمی */
-.green-title {
-  color: #00ff66;
-  font-weight: 800;
-}
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
 
-/* هدر */
-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 3000;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(18px);
-  padding: 18px 55px;
-  border-bottom: 1px solid rgba(0, 255, 102, 0.15);
-}
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+<!-- پس‌زمینه تاریک منو -->
+<div class="menu-overlay"></div>
 
-/* دکمه سه‌خطی موبایل */
-.menu-toggle {
-  display: none;
-  font-size: 32px;
-  color: #00ff66;
-  cursor: pointer;
-  user-select: none;
-  z-index: 4000;
-}
+<header>
+  <nav class="top-nav">
 
-/* لوگو */
-.nav-logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #00ff66;
-  letter-spacing: 0.5px;
-}
+    <!-- دکمه سه‌خطی موبایل -->
+    <div class="menu-toggle">&#9776;</div>
 
-/* منو (دسکتاپ) */
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 38px;
-  margin: 0;
-  padding: 0;
-}
+    <div class="nav-logo">
+      Elites_Game
+    </div>
 
-.nav-menu a {
-  color: #d8d8d8;
-  text-decoration: none;
-  font-size: 15.5px;
-  transition: 0.25s;
-  padding-bottom: 4px;
-}
+    <ul class="nav-menu">
+      <li><a href="#home">خانه</a></li>
+      <li><a href="#about">درباره ما</a></li>
+      <li><a href="#projects">پروژه‌ها</a></li>
+      <li><a href="#team">تیم</a></li>
+      <li><a href="#contact">تماس با ما</a></li>
+    </ul>
 
-.nav-menu a:hover {
-  color: #00ff66;
-  border-bottom: 1px solid #00ff66;
-}
+    <a class="join-btn" href="#contact">عضویت در تیم</a>
+  </nav>
+</header>
 
-/* افکت نئون برای آیتم‌های منو */
-.nav-menu li a {
-  position: relative;
-  transition: color 0.3s ease;
-}
+<!-- صفحه اصلی -->
+<section id="home" class="hero">
+  <div class="logo-box">
+    <span class="logo-e">E</span>
+  </div>
 
-.nav-menu li a:hover {
-  color: #ffffff;
-}
+  <h1 class="title"><span id="typed-text"></span></h1>
+  <p class="subtitle">تیم برنامه‌نویسی و توسعه بازی</p>
+</section>
 
-.nav-menu li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 2px;
-  background: #00ff66;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
+<!-- درباره ما -->
+<section id="about" class="section section-dark">
+  <h2 class="section-title">درباره <span class="green-title">Elites_Game</span></h2>
+  <p class="section-text">
+    ما یک تیم برنامه‌نویسی خلاق و پرانرژی هستیم که با عشق و علاقه به کدنویسی و توسعه بازی و اپلیکیشن و
+    پروژه‌های نوآورانه هستیم و به آن می‌پردازیم.
+  </p>
 
-.nav-menu li a:hover::after {
-  transform: scaleX(1);
-}
+  <div class="features-grid">
+    <div class="feature-card">
+      <h3>عملکرد بالا</h3>
+      <p>تمرکز بر بهینه‌سازی و ارائه بهترین عملکرد</p>
+    </div>
+    <div class="feature-card">
+      <h3>کار تیمی</h3>
+      <p>همکاری تیمی قوی با اعضای متخصص و با تجربه</p>
+    </div>
+    <div class="feature-card">
+      <h3>توسعه بازی</h3>
+      <p>ساخت بازی‌های جذاب و خلاقانه برای پلتفرم‌های مختلف</p>
+    </div>
+    <div class="feature-card">
+      <h3>توسعه نرم‌افزار</h3>
+      <p>طراحی و پیاده‌سازی نرم‌افزارهای حرفه‌ای با جدیدترین تکنولوژی‌ها</p>
+    </div>
+  </div>
+</section>
 
-/* دکمه عضویت */
-.join-btn {
-  background: #00ff66;
-  padding: 10px 22px;
-  border-radius: 10px;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  transition: 0.3s;
-  margin-left: 70px;
-  box-shadow: 0 0 12px rgba(0, 255, 102, 0.35);
-}
+<!-- پروژه‌ها -->
+<section id="projects" class="section">
+  <h2 class="section-title">پروژه‌های <span>ما</span></h2>
+  <p class="section-text">نمونه‌ای از پروژه‌هایی که توسط تیم ما توسعه داده شده‌اند</p>
 
-.join-btn:hover {
-  background: #00cc55;
-  box-shadow: 0 0 18px rgba(0, 255, 102, 0.55);
-}
+  <div class="projects-list">
+    <!-- پروژه‌ها (همونطور که نوشتی) -->
+  </div>
+</section>
 
-/* صفحه اصلی */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<!-- تیم -->
+<section id="team" class="section section-dark">
+  <h2 class="section-title">اعضای <span>تیم</span></h2>
+  <p class="section-text">با اعضای با استعداد و متخصص تیم ما آشنا شوید</p>
 
-  background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)),
-    url("https://biaupload.com/do.php?imgf=org-1f457f92ced41.png") center/cover no-repeat;
+  <div class="team-grid">
+    <!-- کارت اعضای تیم -->
+  </div>
+</section>
 
-  padding-top: 60px;
-}
+<!-- تماس با ما -->
+<section id="contact" class="section">
+  <h2 class="section-title">ارتباط با ما</h2>
+  <p class="section-text">
+    تیم برنامه‌نویسی و توسعه بازی با هدف خلق تجربه‌های دیجیتال نوآورانه
+  </p>
 
-/* لوگوی وسط */
-.logo-box {
-  width: 120px;
-  height: 120px;
-  background: #050608;
-  border-radius: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 25px;
-  border: 1px solid rgba(0, 255, 102, 0.35);
-  box-shadow:
-    0 0 12px rgba(0, 255, 102, 0.4),
-    0 0 25px rgba(0, 255, 102, 0.25),
-    0 0 45px rgba(0, 255, 102, 0.15);
-  animation: rotateLogo 2s ease-in-out; /* چرخش سه‌دوره‌ای */
-}
+  <div class="footer-grid">
+    <!-- بخش ارتباط و لینک‌ها -->
+  </div>
+</section>
 
-.logo-e {
-  font-size: 64px;
-  font-weight: bold;
-  color: #00ff66;
-  text-shadow:
-    0 0 8px rgba(0, 255, 102, 0.8),
-    0 0 16px rgba(0, 255, 102, 0.6);
-}
+<footer class="bottom-footer">
+  <p>تمامی حقوق محفوظ است - Elites_Game ۱۴۰۴ ©</p>
+</footer>
 
-.title {
-  font-size: 56px;
-  font-weight: 800;
-}
+<!-- اسکریپت منوی موبایل -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.nav-menu');
+  const overlay = document.querySelector('.menu-overlay');
 
-.subtitle {
-  font-size: 20px;
-  margin-top: 10px;
-  color: #00ff66;
-  opacity: 0;
-  animation: fadeInSubtitle 2s ease forwards;
-  animation-delay: 2.5s; /* بعد از تایپ ظاهر میشه */
-}
-
-/* انیمیشن‌ها */
-@keyframes rotateLogo {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(1080deg); } /* 3 دور */
-}
-
-@keyframes fadeInSubtitle {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* بخش‌ها */
-.section {
-  padding: 80px 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.section-dark {
-  background: #070a0f;
-  border-radius: 24px;
-  margin-top: 40px;
-}
-
-.section-title {
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-/* نسخه موبایل */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block !important;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+  function toggleMenu() {
+    menu.classList.toggle('open');
+    overlay.classList.toggle('show');
   }
 
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -260px;
-    width: 240px;
-    height: 100%;
-    background: #0a0d12;
-    flex-direction: column;
-    padding-top: 90px;
-    padding-right: 25px;
-    gap: 25px;
-    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    border-left: 1px solid rgba(0, 255, 102, 0.25);
-    z-index: 2500;
-    opacity: 0;
+  toggle.addEventListener('click', toggleMenu);
+  overlay.addEventListener('click', toggleMenu);
+
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      overlay.classList.remove('show');
+    });
+  });
+</script>
+
+<!-- اسکریپت تایپ شدن متن -->
+<script>
+  const text = "Elites_Game";
+  let i = 0;
+
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("typed-text").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 150); // سرعت تایپ
+    }
   }
 
-  .nav-menu.open {
-    right: 0;
-    opacity: 1;
-  }
+  window.onload = typeWriter;
+</script>
 
-  .join-btn {
-    display: none !important;
-  }
-}
+</body>
+</html>

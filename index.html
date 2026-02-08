@@ -1,282 +1,240 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elites_Game | تیم برنامه‌نویسی و توسعه بازی</title>
+/* تنظیمات پایه */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  direction: rtl;
+  background: #050608;
+  color: #fff;
+}
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
+/* رنگ سبز تیمی */
+.green-title {
+  color: #00ff66;
+  font-weight: 800;
+}
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* هدر */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 3000;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(18px);
+  padding: 18px 55px;
+  border-bottom: 1px solid rgba(0, 255, 102, 0.15);
+}
 
-<!-- پس‌زمینه تاریک منو -->
-<div class="menu-overlay"></div>
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-<header>
-  <nav class="top-nav">
+/* دکمه سه‌خطی موبایل */
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  color: #00ff66;
+  cursor: pointer;
+  user-select: none;
+  z-index: 4000;
+}
 
-    <!-- دکمه سه‌خطی موبایل -->
-    <div class="menu-toggle">&#9776;</div>
+/* لوگو */
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ff66;
+  letter-spacing: 0.5px;
+}
 
-<div class="nav-logo">
-  Elites_Game
-</div>
+/* منو (دسکتاپ) */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 38px;
+  margin: 0;
+  padding: 0;
+}
 
-    <ul class="nav-menu">
-      <li><a href="#home">خانه</a></li>
-      <li><a href="#about">درباره ما</a></li>
-      <li><a href="#projects">پروژه‌ها</a></li>
-      <li><a href="#team">تیم</a></li>
-      <li><a href="#contact">تماس با ما</a></li>
-    </ul>
+.nav-menu a {
+  color: #d8d8d8;
+  text-decoration: none;
+  font-size: 15.5px;
+  transition: 0.25s;
+  padding-bottom: 4px;
+}
 
-    <a class="join-btn" href="#contact">عضویت در تیم</a>
-  </nav>
-</header>
+.nav-menu a:hover {
+  color: #00ff66;
+  border-bottom: 1px solid #00ff66;
+}
 
-<!-- صفحه اصلی -->
-<section id="home" class="hero">
-  <div class="logo-box">
-    <span class="logo-e">E</span>
-  </div>
+/* افکت نئون برای آیتم‌های منو */
+.nav-menu li a {
+  position: relative;
+  transition: color 0.3s ease;
+}
 
-  <h1 class="title">Elites_Game</h1>
-  <p class="subtitle">تیم برنامه‌نویسی و توسعه بازی</p>
-</section>
+.nav-menu li a:hover {
+  color: #ffffff;
+}
 
-<!-- درباره ما -->
-<section id="about" class="section section-dark">
-  <h2 class="section-title">درباره <span class="green-title">Elites_Game</span></h2>
-  <p class="section-text">
-    ما یک تیم برنامه‌نویسی خلاق و پرانرژی هستیم که با عشق و علاقه به کدنویسی و توسعه بازی و اپلیکیشن و
-    پروژه‌های نوآورانه هستیم و به آن می‌پردازیم.
-  </p>
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #00ff66;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
 
-  <div class="features-grid">
-    <div class="feature-card">
-      <h3>عملکرد بالا</h3>
-      <p>تمرکز بر بهینه‌سازی و ارائه بهترین عملکرد</p>
-    </div>
-    <div class="feature-card">
-      <h3>کار تیمی</h3>
-      <p>همکاری تیمی قوی با اعضای متخصص و با تجربه</p>
-    </div>
-    <div class="feature-card">
-      <h3>توسعه بازی</h3>
-      <p>ساخت بازی‌های جذاب و خلاقانه برای پلتفرم‌های مختلف</p>
-    </div>
-    <div class="feature-card">
-      <h3>توسعه نرم‌افزار</h3>
-      <p>طراحی و پیاده‌سازی نرم‌افزارهای حرفه‌ای با جدیدترین تکنولوژی‌ها</p>
-    </div>
-  </div>
-</section>
+.nav-menu li a:hover::after {
+  transform: scaleX(1);
+}
 
-<!-- پروژه‌ها -->
-<section id="projects" class="section">
-  <h2 class="section-title">پروژه‌های <span>ما</span></h2>
-  <p class="section-text">نمونه‌ای از پروژه‌هایی که توسط تیم ما توسعه داده شده‌اند</p>
+/* دکمه عضویت */
+.join-btn {
+  background: #00ff66;
+  padding: 10px 22px;
+  border-radius: 10px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+  margin-left: 70px;
+  box-shadow: 0 0 12px rgba(0, 255, 102, 0.35);
+}
 
-  <div class="projects-list">
+.join-btn:hover {
+  background: #00cc55;
+  box-shadow: 0 0 18px rgba(0, 255, 102, 0.55);
+}
 
-    <!-- پروژه 1 -->
-    <div class="project-box">
-      <img src="https://biaupload.com/do.php?imgf=org-0c20f0ef263c1.png" class="project-logo" alt="project logo">
-      <h3 class="project-name">آموزش زبان انگلیسی</h3>
-      <p class="project-desc">
-        ما در این برنامه به شما عزیزان آموزش مبتدی زبان انگلیسی داده‌ایم و به‌زودی نسخه پیشرفته را منتشر می‌کنیم.
-      </p>
-      <div class="project-bottom">
-        <a class="download-btn" href="https://myket.ir/dl?packageName=ir.amozeshzabankodakanq">دانلود</a>
-        <span class="project-state done">تکمیل شده</span>
-      </div>
-    </div>
+/* صفحه اصلی */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-    <!-- پروژه 2 -->
-    <div class="project-box">
-      <img src="https://biaupload.com/do.php?imgf=org-51d837abda971.png" class="project-logo" alt="project logo">
-      <h3 class="project-name">اپلیکیشن دعای فرج</h3>
-      <p class="project-desc">
-        فایل صوتی + متن + ترجمه فارسی جمله‌به‌جمله + ویدیو زیبای دعای فرج داخل این اپ قرار داده شده است.
-      </p>
-      <div class="project-bottom">
-        <a class="download-btn" href="https://myket.ir/dl?packageName=ir.fatage140004546874044440d.h">دانلود</a>
-        <span class="project-state done">تکمیل شده</span>
-      </div>
-    </div>
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)),
+    url("https://biaupload.com/do.php?imgf=org-1f457f92ced41.png") center/cover no-repeat;
 
-    <!-- پروژه 3 -->
-    <div class="project-box">
-      <img src="https://biaupload.com/do.php?imgf=org-669ef1a8480d1.png" class="project-logo" alt="project logo">
-      <h3 class="project-name">آموزش فری فایر</h3>
-      <p class="project-desc">
-         اموزش کامل مو به مو تمامی بخش های بازی بسیار زیبا و جالب فری فایر توضیحات کامل در مورد تمامی گان ها و
-      </p>
-      <div class="project-bottom">
-        <a class="download-btn" href="https://myket.ir/dl?packageName=ir.amozachefrefire.m12454674657boygames">دانلود</a>
-        <span class="project-state done">تکمیل شده</span>
-      </div>
-    </div>
+  padding-top: 60px;
+}
 
-    <!-- پروژه 4 -->
-    <div class="project-box">
-      <img src="https://biaupload.com/do.php?imgf=org-6c682338f2421.png" class="project-logo" alt="project logo">
-      <h3 class="project-name">اموزش ساخت سایت</h3>
-      <p class="project-desc">
-        ما در این اپلیکیشن به صورت کامل رایگان بهتون اموزش ساخت سایت با سایت ساز مخصوص گوگل رو به همراه تصویر و ویدیو قرار داده ایم  که با کمک ان میتوانید سایت بسازید
-      </p>
-      <div class="project-bottom">
-        <a class="download-btn" href="https://myket.ir/dl?packageName=ir.amozachesitesir202114151618564785120246456879664565167611262">دانلود</a>
-        <span class="project-state done">تکمیل شده</span>
-      </div>
-    </div>
+/* لوگوی وسط */
+.logo-box {
+  width: 120px;
+  height: 120px;
+  background: #050608;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  border: 1px solid rgba(0, 255, 102, 0.35);
+  box-shadow:
+    0 0 12px rgba(0, 255, 102, 0.4),
+    0 0 25px rgba(0, 255, 102, 0.25),
+    0 0 45px rgba(0, 255, 102, 0.15);
+  animation: rotateLogo 2s ease-in-out; /* چرخش سه‌دوره‌ای */
+}
 
-    <!-- پروژه 5 -->
-    <div class="project-box">
-      <img src="https://biaupload.com/do.php?imgf=org-669eaa3050091.png" class="project-logo" alt="project logo">
-      <h3 class="project-name">سوره های قران</h3>
-      <p class="project-desc">
-       ما در این اپلیکشین برای شما عزیزان به صورت کاملا رایگان فایل صوتی متن و ترجمه کامل تمامی سوره های قران به صورت جمله به جمله ترجمه شده است
-      </p>
-      <div class="project-bottom">
-        <a class="download-btn" href="https://myket.ir/dl?packageName=ir.quran2021233546452534201020478594782122">دانلود</a>
-        <span class="project-state done">تکمیل شده</span>
-      </div>
-    </div>
+.logo-e {
+  font-size: 64px;
+  font-weight: bold;
+  color: #00ff66;
+  text-shadow:
+    0 0 8px rgba(0, 255, 102, 0.8),
+    0 0 16px rgba(0, 255, 102, 0.6);
+}
 
-    <!-- پروژه 6 -->
-    <div class="project-box">
-      <img src="https://biaupload.com/do.php?imgf=org-12234ed975d01.png" class="project-logo" alt="project logo">
-      <h3 class="project-name">اموزش ساخت کواد کوپتر </h3>
-      <p class="project-desc">
-       در این اپلیکیشن ما به صورت کامل برای شما امازش صفر تا صد ساخت کواد کوپتر به صورت حرفه ای و توضیحات کامل در مورد وسایل مورد نیاز داده شده
-      </p>
-      <div class="project-bottom">
-        <a class="download-btn" href="https://myket.ir/dl?packageName=ir.amozachecoadcopter2021ray1ganeapee20125465468">دانلود</a>
-        <span class="project-state done">تکمیل شده</span>
-      </div>
-    </div>
+.title {
+  font-size: 56px;
+  font-weight: 800;
+}
 
-  </div>
-</section>
+.subtitle {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #00ff66;
+  opacity: 0;
+  animation: fadeInSubtitle 2s ease forwards;
+  animation-delay: 2.5s; /* بعد از تایپ ظاهر میشه */
+}
 
-<!-- تیم -->
-<section id="team" class="section section-dark">
-  <h2 class="section-title">اعضای <span>تیم</span></h2>
-  <p class="section-text">با اعضای با استعداد و متخصص تیم ما آشنا شوید</p>
+/* انیمیشن‌ها */
+@keyframes rotateLogo {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(1080deg); } /* 3 دور */
+}
 
-  <div class="team-grid">
+@keyframes fadeInSubtitle {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-    <div class="team-card">
-      <h3>مرتضی براتی</h3>
-      <p class="role">برنامه نویس و مدیر تیم</p>
-      <p class="skills">Python • Android • HTML • CSS • Scripter</p>
-      <div class="socials">
-        <a href="#">X</a>
-        <a href="#">in</a>
-        <a href="#">GH</a>
-      </div>
-    </div>
+/* بخش‌ها */
+.section {
+  padding: 80px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-    <div class="team-card">
-      <h3>امیر حسین باریکزهی</h3>
-      <p class="role">توسعه دهنده ارشد</p>
-      <p class="skills">TypeScript • Node.js • React</p>
-      <div class="socials">
-        <a href="#">X</a>
-        <a href="#">in</a>
-        <a href="#">GH</a>
-      </div>
-    </div>
+.section-dark {
+  background: #070a0f;
+  border-radius: 24px;
+  margin-top: 40px;
+}
 
-    <div class="team-card">
-      <h3>مهدیار بخشی زاده</h3>
-      <p class="role">طراح UI/UX</p>
-      <p class="skills">CSS • Adobe XD • Figma</p>
-      <div class="socials">
-        <a href="#">X</a>
-        <a href="#">in</a>
-        <a href="#">GH</a>
-      </div>
-    </div>
+.section-title {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
 
-    <div class="team-card">
-      <h3>محمدرضا کریم زاده ثانی</h3>
-      <p class="role">ایده پرداز</p>
-      <p class="skills">Microsoft Office</p>
-      <div class="socials">
-        <a href="#">X</a>
-        <a href="#">in</a>
-        <a href="#">GH</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- تماس با ما -->
-<section id="contact" class="section">
-  <h2 class="section-title">ارتباط با ما</h2>
-  <p class="section-text">
-    تیم برنامه‌نویسی و توسعه بازی با هدف خلق تجربه‌های دیجیتال نوآورانه
-  </p>
-
-  <div class="footer-grid">
-    <div>
-      <h3>ارتباط</h3>
-      <p>Email: info@elitsgame.com</p>
-      <div class="footer-socials">
-        <a href="#">TG</a>
-        <a href="#">IG</a>
-        <a href="#">X</a>
-        <a href="#">GH</a>
-      </div>
-    </div>
-
-    <div>
-      <h3>دسترسی سریع</h3>
-      <ul class="footer-links">
-        <li><a href="#home">خانه</a></li>
-        <li><a href="#about">درباره ما</a></li>
-        <li><a href="#projects">پروژه‌ها</a></li>
-        <li><a href="#team">تیم</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-brand">
-      <h3>Elites_Game</h3>
-    </div>
-  </div>
-</section>
-
-<footer class="bottom-footer">
-  <p>تمامی حقوق محفوظ است - Elites_Game ۱۴۰۴ ©</p>
-</footer>
-
-<!-- اسکریپت کامل منوی موبایل -->
-<script>
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.nav-menu');
-  const overlay = document.querySelector('.menu-overlay');
-
-  function toggleMenu() {
-    menu.classList.toggle('open');
-    overlay.classList.toggle('show');
+/* نسخه موبایل */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block !important;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  toggle.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', toggleMenu);
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 240px;
+    height: 100%;
+    background: #0a0d12;
+    flex-direction: column;
+    padding-top: 90px;
+    padding-right: 25px;
+    gap: 25px;
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    border-left: 1px solid rgba(0, 255, 102, 0.25);
+    z-index: 2500;
+    opacity: 0;
+  }
 
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('open');
-      overlay.classList.remove('show');
-    });
-  });
-</script>
+  .nav-menu.open {
+    right: 0;
+    opacity: 1;
+  }
 
-</body>
-</html>
+  .join-btn {
+    display: none !important;
+  }
+}

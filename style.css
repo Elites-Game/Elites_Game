@@ -331,3 +331,81 @@ header {
 
 .team-card {
   background: #10131b;
+
+
+/* منو (دسکتاپ) */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 38px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  color: #d8d8d8;
+  text-decoration: none;
+  font-size: 15.5px;
+  transition: 0.25s;
+  padding-bottom: 4px;
+}
+
+.nav-menu a:hover {
+  color: #00ff66;
+  border-bottom: 1px solid #00ff66;
+}
+
+/* افکت نئون برای آیتم‌های منو */
+.nav-menu li a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #ffffff;
+}
+
+.nav-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #00ff66;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-menu li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* نسخه موبایل */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -260px; /* حالت بسته */
+    width: 240px;
+    height: 100%;
+    background: #0a0d12;
+    flex-direction: column;
+    padding-top: 90px;
+    padding-right: 25px;
+    gap: 25px;
+    transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    border-left: 1px solid rgba(0, 255, 102, 0.25);
+    z-index: 2500;
+    opacity: 0;
+  }
+
+  .nav-menu.open {
+    right: 0;       /* حالت باز */
+    opacity: 1;
+  }
+
+  .join-btn {
+    display: none !important;
+  }
+}

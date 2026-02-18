@@ -13,6 +13,29 @@ body {
   font-weight: 800;
 }
 
+/* چرخش لوگو */
+.logo-box {
+  animation: rotateLogo 2s ease-in-out forwards;
+}
+
+@keyframes rotateLogo {
+  from { transform: rotate(0deg); opacity: 0; }
+  to { transform: rotate(1080deg); opacity: 1; }
+}
+
+/* زیرنویس بعد از تایپ */
+.subtitle {
+  opacity: 0;
+  animation: subtitleFade 2s ease forwards;
+  animation-delay: 3s;
+}
+
+@keyframes subtitleFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
 /* هدر */
 header {
   width: 100%;
@@ -479,3 +502,69 @@ header {
 #team .section-text {
   text-align: center;
 }
+/* تایپ متن درباره ما */
+.about-typed {
+  font-size: 17px;
+  color: #d0d0d0;
+  min-height: 60px;
+}
+
+/* کارت‌ها با انیمیشن نمایان شدن */
+.feature-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: featureFade 1s ease forwards;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.5s; }
+.feature-card:nth-child(2) { animation-delay: 0.8s; }
+.feature-card:nth-child(3) { animation-delay: 1.1s; }
+.feature-card:nth-child(4) { animation-delay: 1.4s; }
+
+@keyframes featureFade {
+  to { opacity: 1; transform: translateY(0); }
+}
+.project-box {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: projectFade 0.8s ease forwards;
+}
+
+.project-box:nth-child(1) { animation-delay: 0.3s; }
+.project-box:nth-child(2) { animation-delay: 0.6s; }
+.project-box:nth-child(3) { animation-delay: 0.9s; }
+.project-box:nth-child(4) { animation-delay: 1.2s; }
+.project-box:nth-child(5) { animation-delay: 1.5s; }
+.project-box:nth-child(6) { animation-delay: 1.8s; }
+
+@keyframes projectFade {
+  to { opacity: 1; transform: translateY(0); }
+}
+.team-card {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: teamShow 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes teamShow {
+  to {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(0,255,102,0.15);
+  }
+}
+.footer-grid > div {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: contactFade 1s ease forwards;
+}
+
+.footer-grid > div:nth-child(1) { animation-delay: 0.3s; }
+.footer-grid > div:nth-child(2) { animation-delay: 0.6s; }
+.footer-grid > div:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes contactFade {
+  to { opacity: 1; transform: translateY(0); }
+}
+

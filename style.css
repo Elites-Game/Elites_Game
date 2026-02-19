@@ -13,8 +13,23 @@ body {
   font-weight: 800;
 }
 
-/* چرخش لوگو */
+/* ===========================
+   لوگوی وسط + انیمیشن
+=========================== */
 .logo-box {
+  width: 120px;
+  height: 120px;
+  background: #050608;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  border: 1px solid rgba(0, 255, 102, 0.35);
+  box-shadow:
+    0 0 12px rgba(0, 255, 102, 0.4),
+    0 0 25px rgba(0, 255, 102, 0.25),
+    0 0 45px rgba(0, 255, 102, 0.15);
   animation: rotateLogo 2s ease-in-out forwards;
 }
 
@@ -23,11 +38,18 @@ body {
   to { transform: rotate(1080deg); opacity: 1; }
 }
 
-/* زیرنویس بعد از تایپ */
+.center-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+/* زیرنویس */
 .subtitle {
   opacity: 0;
   animation: subtitleFade 2s ease forwards;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 @keyframes subtitleFade {
@@ -35,8 +57,9 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-
-/* هدر */
+/* ===========================
+   هدر
+=========================== */
 header {
   width: 100%;
   position: fixed;
@@ -54,7 +77,6 @@ header {
   align-items: center;
 }
 
-/* دکمه سه‌خطی موبایل */
 .menu-toggle {
   display: none;
   font-size: 32px;
@@ -64,15 +86,12 @@ header {
   z-index: 4000;
 }
 
-/* لوگو */
 .nav-logo {
   font-size: 24px;
   font-weight: bold;
   color: #00ff66;
-  letter-spacing: 0.5px;
 }
 
-/* منو */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -94,7 +113,6 @@ header {
   border-bottom: 1px solid #00ff66;
 }
 
-/* دکمه عضویت */
 .join-btn {
   background: #00ff66;
   padding: 10px 22px;
@@ -113,7 +131,9 @@ header {
   box-shadow: 0 0 18px rgba(0, 255, 102, 0.55);
 }
 
-/* صفحه اصلی */
+/* ===========================
+   صفحه اصلی
+=========================== */
 .hero {
   height: 100vh;
   display: flex;
@@ -121,52 +141,21 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)),
     url("https://biaupload.com/do.php?imgf=org-1f457f92ced41.png") center/cover no-repeat;
-
   padding-top: 60px;
-}
-
-/* لوگوی وسط */
-.logo-box {
-  width: 120px;
-  height: 120px;
-  background: #050608;
-  border-radius: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 25px;
-  border: 1px solid rgba(0, 255, 102, 0.35);
-  box-shadow:
-    0 0 12px rgba(0, 255, 102, 0.4),
-    0 0 25px rgba(0, 255, 102, 0.25),
-    0 0 45px rgba(0, 255, 102, 0.15);
-}
-
-.logo-e {
-  font-size: 64px;
-  font-weight: bold;
-  color: #00ff66;
-  text-shadow:
-    0 0 8px rgba(0, 255, 102, 0.8),
-    0 0 16px rgba(0, 255, 102, 0.6);
 }
 
 .title {
   font-size: 56px;
   font-weight: 800;
+  margin: 0;
 }
 
-.subtitle {
-  font-size: 20px;
-  margin-top: 10px;
-  color: #00ff66;
-}
-
-/* بخش‌ها */
+/* ===========================
+   بخش‌ها
+=========================== */
 .section {
   padding: 80px 40px;
   max-width: 1100px;
@@ -180,36 +169,33 @@ header {
 }
 
 .section-title {
-  font-size: 26px;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
   margin-bottom: 10px;
 }
 
-/* درباره ما */
-#about {
-  text-align: center;
-  padding-top: 120px;
+.section-title span {
+  color: #00ff66;
 }
 
-#about .section-title {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-#about .section-text {
-  max-width: 750px;
-  margin: 0 auto 40px auto;
-  line-height: 2;
-  font-size: 17px;
-  color: #d0d0d0;
-}
-
-/* متن عمومی */
 .section-text {
   color: #c0c0c0;
   margin-bottom: 30px;
+  text-align: center;
 }
 
-/* ویژگی‌ها */
+/* ===========================
+   درباره ما
+=========================== */
+.about-typed {
+  font-size: 17px;
+  color: #d0d0d0;
+  min-height: 60px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -221,104 +207,55 @@ header {
   border-radius: 16px;
   padding: 18px;
   border: 1px solid #1f2430;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: featureFade 1s ease forwards;
 }
 
-.feature-card h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
-  color: #00ff66;
+.feature-card:nth-child(1) { animation-delay: 0.5s; }
+.feature-card:nth-child(2) { animation-delay: 0.8s; }
+.feature-card:nth-child(3) { animation-delay: 1.1s; }
+.feature-card:nth-child(4) { animation-delay: 1.4s; }
+
+@keyframes featureFade {
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.feature-card p {
-  margin: 0;
-  color: #c0c0c0;
-}
-
-/* پروژه‌ها */
-#projects .section-title {
-  font-size: 32px;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-#projects .section-title span {
-  color: #00ff66;
-}
-
-#projects .section-text {
-  text-align: center;
-}
-
-#projects .projects-list {
+/* ===========================
+   پروژه‌ها
+=========================== */
+.projects-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
   margin-top: 30px;
 }
 
-#projects .project-box {
+.project-box {
   background: #0d1117;
   border: 1px solid #1f2430;
   border-radius: 20px;
   padding: 25px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0,255,102,0.05);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: projectFade 0.8s ease forwards;
 }
 
-#projects .project-logo {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  margin-bottom: 15px;
+.project-box:nth-child(1) { animation-delay: 0.3s; }
+.project-box:nth-child(2) { animation-delay: 0.6s; }
+.project-box:nth-child(3) { animation-delay: 0.9s; }
+.project-box:nth-child(4) { animation-delay: 1.2s; }
+.project-box:nth-child(5) { animation-delay: 1.5s; }
+.project-box:nth-child(6) { animation-delay: 1.8s; }
+
+@keyframes projectFade {
+  to { opacity: 1; transform: translateY(0); }
 }
 
-#projects .project-name {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-#projects .project-desc {
-  color: #c0c0c0;
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-#projects .project-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-
-#projects .download-btn {
-  background: #00ff66;
-  color: #000;
-  padding: 8px 18px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-#projects .download-btn:hover {
-  background: #00cc55;
-}
-
-#projects .project-state {
-  font-size: 14px;
-  padding: 6px 12px;
-  border-radius: 8px;
-}
-
-#projects .project-state.done {
-  background: rgba(0, 255, 102, 0.15);
-  color: #00ff66;
-}
-
-/* تیم */
+/* ===========================
+   تیم
+=========================== */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -331,39 +268,23 @@ header {
   border-radius: 18px;
   padding: 18px;
   border: 1px solid #1f2430;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: teamShow 1s ease forwards;
+  animation-delay: 0.5s;
 }
 
-.team-card h3 {
-  margin-top: 0;
-  margin-bottom: 6px;
+@keyframes teamShow {
+  to {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(0,255,102,0.15);
+  }
 }
 
-.role {
-  color: #00ff66;
-  margin: 0 0 4px 0;
-}
-
-.skills {
-  color: #c0c0c0;
-  font-size: 13px;
-  margin-bottom: 10px;
-}
-
-.socials {
-  display: flex;
-  gap: 8px;
-}
-
-.socials a {
-  font-size: 11px;
-  text-decoration: none;
-  color: #000;
-  background: #00ff66;
-  padding: 4px 8px;
-  border-radius: 999px;
-}
-
-/* فوتر */
+/* ===========================
+   فوتر
+=========================== */
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -371,56 +292,23 @@ header {
   margin-top: 20px;
 }
 
-.footer-socials {
-  display: flex;
-  gap: 8px;
-  margin-top: 8px;
+.footer-grid > div {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: contactFade 1s ease forwards;
 }
 
-.footer-socials a {
-  font-size: 11px;
-  text-decoration: none;
-  color: #000;
-  background: #00ff66;
-  padding: 4px 8px;
-  border-radius: 999px;
+.footer-grid > div:nth-child(1) { animation-delay: 0.3s; }
+.footer-grid > div:nth-child(2) { animation-delay: 0.6s; }
+.footer-grid > div:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes contactFade {
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  margin-bottom: 6px;
-}
-
-.footer-links a {
-  color: #c0c0c0;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.footer-links a:hover {
-  color: #ffffff;
-}
-
-.footer-brand h3 {
-  margin-top: 0;
-  color: #00ff66;
-}
-
-.bottom-footer {
-  text-align: center;
-  padding: 16px;
-  font-size: 13px;
-  color: #a0a0a0;
-  border-top: 1px solid #1f2430;
-  margin-top: 20px;
-}
-
-/* نسخه موبایل */
+/* ===========================
+   نسخه موبایل
+=========================== */
 @media (max-width: 768px) {
 
   header {
@@ -471,7 +359,7 @@ header {
   }
 }
 
-/* پس‌زمینه تاریک */
+/* پس‌زمینه تاریک منو */
 .menu-overlay {
   display: none;
   position: fixed;
@@ -486,85 +374,3 @@ header {
 .menu-overlay.show {
   display: block;
 }
-
-/* استایل نهایی بخش تیم */
-#team .section-title {
-  font-size: 32px;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-#team .section-title span {
-  color: #00ff66;
-}
-
-#team .section-text {
-  text-align: center;
-}
-/* تایپ متن درباره ما */
-.about-typed {
-  font-size: 17px;
-  color: #d0d0d0;
-  min-height: 60px;
-}
-
-/* کارت‌ها با انیمیشن نمایان شدن */
-.feature-card {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: featureFade 1s ease forwards;
-}
-
-.feature-card:nth-child(1) { animation-delay: 0.5s; }
-.feature-card:nth-child(2) { animation-delay: 0.8s; }
-.feature-card:nth-child(3) { animation-delay: 1.1s; }
-.feature-card:nth-child(4) { animation-delay: 1.4s; }
-
-@keyframes featureFade {
-  to { opacity: 1; transform: translateY(0); }
-}
-.project-box {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: projectFade 0.8s ease forwards;
-}
-
-.project-box:nth-child(1) { animation-delay: 0.3s; }
-.project-box:nth-child(2) { animation-delay: 0.6s; }
-.project-box:nth-child(3) { animation-delay: 0.9s; }
-.project-box:nth-child(4) { animation-delay: 1.2s; }
-.project-box:nth-child(5) { animation-delay: 1.5s; }
-.project-box:nth-child(6) { animation-delay: 1.8s; }
-
-@keyframes projectFade {
-  to { opacity: 1; transform: translateY(0); }
-}
-.team-card {
-  opacity: 0;
-  transform: scale(0.8);
-  animation: teamShow 1s ease forwards;
-  animation-delay: 0.5s;
-}
-
-@keyframes teamShow {
-  to {
-    opacity: 1;
-    transform: scale(1);
-    box-shadow: 0 0 20px rgba(0,255,102,0.15);
-  }
-}
-.footer-grid > div {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: contactFade 1s ease forwards;
-}
-
-.footer-grid > div:nth-child(1) { animation-delay: 0.3s; }
-.footer-grid > div:nth-child(2) { animation-delay: 0.6s; }
-.footer-grid > div:nth-child(3) { animation-delay: 0.9s; }
-
-@keyframes contactFade {
-  to { opacity: 1; transform: translateY(0); }
-}
-
